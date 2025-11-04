@@ -170,6 +170,7 @@ properties:
               - microsoft,superman-lte
               - microsoft,tesla
               - motorola,peregrine
+              - motorola,titan
               - samsung,matisselte
           - const: qcom,msm8926
           - const: qcom,msm8226
