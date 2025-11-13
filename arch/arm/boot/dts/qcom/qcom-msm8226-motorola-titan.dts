@@ -300,14 +300,14 @@
 	status = "okay";
 
 	accelerometer@39 {
-		compatible = "ams,ct406", "amstaos,tsl2771";
+		compatible = "amstaos,tsl2771";
 		reg = <0x39>;
 		interrupts-extended = <&tlmm 65 IRQ_TYPE_EDGE_FALLING>;
 		vdd-supply = <&pm8226_l19>;
 	};
 
 	magnetometer@0c {
-		compatible = "akm,akm8963", "asahi-kasei,ak8963";
+		compatible = "asahi-kasei,ak8963";
 		reg = <0x0c>;
 		interrupts-extended = <&tlmm 38 IRQ_TYPE_EDGE_FALLING>;
 		reset-gpios = <&tlmm 62 GPIO_ACTIVE_LOW>;
@@ -317,14 +317,14 @@
 	};
 
 	bma2x2@11 {
-		compatible = "bosch,bma2x2", "bosch,bma222";
+		compatible = "bosch,bma222";
 		reg = <0x11>;
 		vdd-supply = <&pm8226_l19>;
 		interrupts-extended = <&tlmm 63 IRQ_TYPE_LEVEL_LOW>; /* IRQ */
 	};
 
 	bmm050@13 {
-		compatible = "bosch,bmm050", "bosch,bmm150";
+		compatible = "bosch,bmm150";
 		reg = <0x13>;
 		vdd-supply = <&pm8226_l19>;
 		interrupts-extended = <&tlmm 66 IRQ_TYPE_LEVEL_LOW>; /* IRQ */
@@ -338,7 +338,7 @@
 	};
 
 	stk3x1x@48 {
-		compatible = "stk,stk3x1x", "sensortek,stk3311";
+		compatible = "sensortek,stk3311";
 		reg = <0x48>;
 		interrupts-extended = <&tlmm 65 IRQ_TYPE_LEVEL_LOW>; /* IRQ */
 		proximity-near-level = <25>;
@@ -410,7 +410,7 @@
 	status = "okay";
 
 	synaptics_dsx_i2c@20 {
-		compatible = "synaptics,synaptics_dsx_i2c", "syna,rmi4-i2c";
+		compatible = "syna,rmi4-i2c";
 		reg = <0x20>;
 		interrupt-parent = <&tlmm>;
 		interrupts = <17 IRQ_TYPE_EDGE_FALLING>;
